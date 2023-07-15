@@ -12,7 +12,7 @@ const ApiDataProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://fakestoreapi.com/products?limit=3');
+      const response = await axios.get('https://fakestoreapi.com/products');
       setApiData(response.data);
     } catch (error) {
       console.error(error);

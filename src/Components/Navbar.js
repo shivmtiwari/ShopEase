@@ -1,8 +1,8 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import { BsEmojiSunglasses } from "react-icons/bs";
-import {Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { CartContext } from '../Context/CartContext';
-import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 
 const Navbar = () => {
@@ -12,13 +12,18 @@ const Navbar = () => {
         <div className="navContainer">
             <div className='navbar '>
                 <div className="logo">
-                    <Link to='/'><h1 className=''>Shop<span style={{color:'#FF3F6C'}}>Ease</span></h1></Link>
+                    <Link to='/'><h1 className=''>Shop<span style={{ color: '#FF3F6C' }}>Ease</span></h1></Link>
                 </div>
                 <ul className='navMenu'>
-                    <NavLink to='/'><li>Home</li></NavLink>
-                    <NavLink to='/products'><li>Products</li></NavLink>
-                    <li><BsEmojiSunglasses/></li>
-                    <NavLink to='/cart' ><AiOutlineShoppingCart/>{getTotalTimesAdded}</NavLink>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    {/* <li><NavLink to='/products'>Products</NavLink></li> */}
+                    <li><NavLink to='/login'><BsEmojiSunglasses className='login-icon' /></NavLink></li>
+                    <li>
+                        <NavLink className='cart' to='/cart' >
+                            <AiOutlineShoppingCart className='cart-icon' />
+                            <span className='cartNum'>{getTotalTimesAdded()}</span>
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         </div>
