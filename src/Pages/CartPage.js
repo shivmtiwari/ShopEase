@@ -6,7 +6,7 @@ const CartPage = () => {
   return (
     <div className='CartPage'>
       <CartItems/>
-      {/* <CartTotal/> */}
+      <CartTotal/>
     </div>
   )
 }
