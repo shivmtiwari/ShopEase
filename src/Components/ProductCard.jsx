@@ -17,7 +17,7 @@ console.log(first20Words);
   return (
     <div  className='CardDiv'>
       <div className="image">
-      <Link to={`/${product.id}`}><img src={product.image}></img></Link>
+      <Link to={`/${product.id}`}><img src={product.image} alt=' '></img></Link>
       </div>
       <div className="content">
         <div className="title-price">

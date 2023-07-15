@@ -15,7 +15,7 @@ const CartItems = () => {
         <div>
           {cartItems.map((item) => (
             <div className='cartCard' key={item.id}>
-              <img src={item.image}></img>
+              <img src={item.image} alt=' '></img>
               <div>
                 <h3>{item.title}</h3>
                 <div className='bottomBtns'>
