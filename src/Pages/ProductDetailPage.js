@@ -8,6 +8,7 @@ import { BiPlus, BiMinus } from 'react-icons/bi'
 
 const ProductDetailPage = () => {
   const [apiData, setApiData] = useState([]);
+  const [mount, setMount] = useState(false)
   const { productId } = useParams();
   const { addToCart, cartItems, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
@@ -23,9 +24,12 @@ const ProductDetailPage = () => {
       console.error(error);
     }
   };
+  if(!mount) {
+    setMount(true);
+  }
   useEffect(() => {
     fetchData();
-  },[]);
+  },[mount]);
 
   console.log(apiData)
   

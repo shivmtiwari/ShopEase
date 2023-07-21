@@ -9,6 +9,9 @@
 li{
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
 .navContainer{
     border-bottom: 2px solid whitesmoke;
 }
