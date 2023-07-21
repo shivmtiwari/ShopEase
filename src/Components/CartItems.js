@@ -8,10 +8,6 @@ const CartItems = () => {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
   return (
-    <div>
-      {cartItems.length === 0 ? (
-        <p style={{display:'flex', alignItems:'center', justifyContent:"center"}}>Your cart is empty.</p>
-      ) : (
         <div>
           {cartItems.map((item) => (
             <div className='cartCard' key={item.id}>
@@ -30,8 +26,6 @@ const CartItems = () => {
             </div>
           ))}
         </div>
-      )}
-    </div>
   );
 };
 

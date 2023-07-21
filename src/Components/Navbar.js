@@ -16,7 +16,7 @@ const Navbar = () => {
                 </div>
                 <ul className='navMenu'>
                     <li><NavLink to='/'>Home</NavLink></li>
-                    {/* <li><NavLink to='/products'>Products</NavLink></li> */}
+                    <li><NavLink to='/products'>Products</NavLink></li>
                     <li><NavLink to='/login'><BsEmojiSunglasses className='login-icon' /></NavLink></li>
                     <li>
                         <NavLink className='cart' to='/cart' >

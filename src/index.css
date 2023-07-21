@@ -14,11 +14,14 @@ li{
 }
 .ProductsPage,
 .CartPage,
-.HomePage{
+.ProductDetailPage{
     padding-top: 40px;
     max-width: 1050px;
     width: 94%;
     margin: auto;
+}
+.ProductsPage{
+    padding-top: 30px;
 }
 .navbar{
     max-width: 1050px;
@@ -29,7 +32,7 @@ li{
     justify-content: space-between;
     padding: 10px 0;
 }
-.navbar a{
+.logo a{
     text-decoration: none;
     color: black;
 }
@@ -87,6 +90,7 @@ position: relative;
     font-weight: bold;
   }
 
+  .TopProducts,
   .ProductList{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(240px, 4fr) );
@@ -138,18 +142,6 @@ position: relative;
     cursor: pointer;
     color: white;
 }
-.bottomBtns{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.bottomBtns .quantityBtn{
-    align-items: center;
-    display: flex;
-    column-gap: 16px;
-}
-
 .cartCard{
     display: flex;
     padding:20px 12px;
@@ -164,36 +156,254 @@ position: relative;
     width: 60px;
     margin-right: 20px;
 }
+
+
+/* decrement , increment and remove item buttons style */
 .bottomBtns{
-    margin-top: 10px;
-    width: 240px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.bottomBtns  button{
-    background-color: transparent;
+
+.bottomBtns .quantityBtn{
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+.bottomBtns  p, .bottomBtns button{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    color: rgb(93, 93, 93);
+
+}
+.bottomBtns button{
+    background-color: transparent;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 7px;
-    font-size: 15px;
-    color: rgb(125, 125, 125);
-    border: 2px solid rgb(125, 125, 125);
     outline: none;
+    border: 2px solid rgb(93, 93, 93);
 }
-
 .bottomBtns .deleteBtn{
+    border-color: #FF3F6C;
     color: #FF3F6C;
-    border-color:  #FF3F6C;
+    background-color: #ff3f6c28;
 }
 
+
+
+/* CSS for Login and Sigup Pages */
+.LoginPage{
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ProductDetailPage{
+    display: flex;
+}
+
+.ProductDetailPage .imagee{
+    max-width: 500px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+}
+.ProductDetailPage .imagee img{
+    max-width: 500px;
+    max-height: 400px;
+    height: 100%;
+}
+
+.CategoryFilter{
+    text-align: center;
+    padding: 30px 0 20px 0;
+    margin: auto;
+}
+.SearchBar{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    column-gap: 30px;
+    border: 2px solid whitesmoke;
+    padding: 10px 20px;
+    border-radius: 6px;
+
+
+}
+.SearchBar input{
+    max-width: 600px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.SearchBar .searchIcon{
+    font-size: 24px;    
+    color: rgb(115, 115, 115);
+}
+
+
+
+/* Hero Section CSS */
+.Hero{
+    max-width: 1050px;
+    width: 94%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 40px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.Hero .HeroText{
+    max-width: 450px;
+    width: 100%;
+    padding-top: 20px ;
+}
+.Hero .HeroText h2{
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+.Hero .HeroText p{
+    margin-bottom: 20px;
+}
+.Hero .HeroText button{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: #202042;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.Hero .HeroImage{
+    padding-top: 20px ;
+    max-width: 500px;
+    width: 100% ;
+
+
+}
+.Hero .HeroImage img{
+    max-width: 500px;
+    width: 100% ;
+    
+}
+
+/* ======================== */
+.TopProductsWrapper{
+    padding-top: 40px;
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+}
+.TopProductsWrapper h2{
+    margin-bottom: 14px;
+}
+.showMoreBtnWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 0;
+    cursor: pointer;
+
+}
+ .showMoreBtn{
+    padding: 0 10px ;
+    border: none;
+    background-color: transparent;
+    color: #202042;
+}
+.showMoreBtnIcon{
+    color: #202042;
+}
+
+/* ============================ */
+.Offer{
+    max-width: 1050px;
+    width: 94%;
+    border-radius:8px ;
+    display: grid;
+    background-color: #202042;
+    color: white;
+    grid-template-columns: auto auto;
+    margin: auto;
+    column-gap: 40px;
+}
+.Offer .offerImage, .Offer .offerText{
+    max-width: 500px;
+    width: 100%;
+    padding: 0;
+}
+.Offer .offerImage img{
+    max-width: 500px;
+    width: 100%;
+    padding: 0;
+    max-height: 260px;
+    height: 100%;
+}
 
 .WhyUs{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 400px;
+    background-color: #fffcfd;
+}
+
+/* ============== footer style =============== */
+.FooterWrap{
+    padding: 20px 0 0 0 ;
+    background-color: #fffafa;
+}
+.Footer{
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    display: grid;
+    margin-bottom: 10px;
+    gap: 10px;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 4fr) );
+}
+.bottomFooter{
+    max-width: 1050px;
+    width: 94%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+.bottomFooter hr{
+    border: none;
+    border-top: 2px solid rgb(88, 88, 88);
+    margin-bottom: 10px;
+}
+.bottomFooter p{
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+}
+@media screen and (max-width: 768px) {
+    .Hero{
+        grid-template-columns:  auto;
+       
+    }
+
+    .Hero .HeroImage{
+        margin: auto;    
+    }
+    .Hero .HeroText{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+        }
 }
