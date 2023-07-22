@@ -2,21 +2,22 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { CartContext } from '../Context/CartContext';
-// import { MdDeleteOutline } from 'react-icons/md'
 import { BiPlus, BiMinus } from 'react-icons/bi'
 
 
 const ProductDetailPage = () => {
   const [apiData, setApiData] = useState([]);
-  const [mount, setMount] = useState(false)
   const { productId } = useParams();
   const { addToCart, cartItems, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
   const handleAddToCart = () => {
     addToCart(apiData);
   };
+  useEffect(() => {
+    fetchData();
+  },[]);
 
-  const fetchData = async () => {
+  const fetchData =  async () => {
     try {
       const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
       setApiData(response.data);
@@ -24,12 +25,6 @@ const ProductDetailPage = () => {
       console.error(error);
     }
   };
-  if(!mount) {
-    setMount(true);
-  }
-  useEffect(() => {
-    fetchData();
-  },[mount]);
 
   console.log(apiData)
   
