@@ -19,23 +19,20 @@ const Navbar = () => {
     };
 
 
+
     //clean up function to remove the active class
     const removeActive = () => {
         setIsActive(false)
     }
+
     const toggleScrollLock = () => {
-        document.body.classList.toggle('scroll-lock');
-    };
-
-    useEffect(() => {
-        if (isActive) {
-            toggleScrollLock();
-        } else {
-            toggleScrollLock();
-        }
-    }, [isActive]);
-
-
+        document.body.classList.toggle('scroll-lock', isActive);
+      };
+    
+      useEffect(() => {
+        toggleScrollLock();
+      }, [isActive]);
+    
 
     return (
         <>

@@ -473,7 +473,8 @@ a {
 
 .scroll-lock {
     overflow: hidden;
-}
+  }
+  
 
 @media screen and (max-width: 768px) {
     .Hero {
@@ -523,6 +524,7 @@ a {
     }
 
     .mobileNavWrapper.active {
+        overflow: hidden;
         top: 0;
         left: 0;
         display: block;
